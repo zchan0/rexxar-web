@@ -2,14 +2,14 @@
   "items": [
     {
       "deploy_time": "Wed, 29 May 2019 14:26:00 GMT",
-      "remote_file": "https://raw.githubusercontent.com/douban/rexxar-web/master/example/dist/rexxar/demo-d7e6d32d90.html",
+      "remote_file": "https://raw.githubusercontent.com/zchan0/rexxar-web/master/example/dist/rexxar/demo-d7e6d32d90.html",
       "uri": "douban://douban.com/rexxar_demo[/]?.*"
     }
   ],
   "partial_items": [
     {
       "deploy_time": "Wed, 29 May 2019 14:26:00 GMT",
-      "remote_file": "https://raw.githubusercontent.com/douban/rexxar-web/master/example/dist/rexxar/demo-d7e6d32d90.html",
+      "remote_file": "https://raw.githubusercontent.com/zchan0/rexxar-web/master/example/dist/rexxar/demo-d7e6d32d90.html",
       "uri": "douban://partial.douban.com/rexxar_demo/_.*"
     }
   ],
