@@ -1,6 +1,6 @@
 require('es6-promise').polyfill();
 import { rexxarFetch } from 'rexxar-web';
-import { obj2str, getType } from './helpers';
+import { obj2str, getType } from './helpers'
 
 export class Request {
 

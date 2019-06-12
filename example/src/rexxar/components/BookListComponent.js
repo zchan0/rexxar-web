@@ -1,25 +1,38 @@
-require('es6-promise').polyfill();
-import React, { PureComponent } from 'react';
-import { rexxarFetch } from 'rexxar-web';
-import { Request } from '../../common/utils/request';
+import React, { Component } from 'react'
 
-class BookListComponent extends PureComponent {
-  getAnnotations = (uid) => {
-    let url = 'https://api.douban.com/v2/book/user/' + uid + '/annotations';
-    rexxarFetch(url)
-    .then(Request.checkError)
-    .then(Request.parseJSON);
-  }
-
+class AnnotationsComponent extends Component {
   render () {
-    const { uid } = this.props;
-    this.getAnnotations(uid);
+    const { annotations } = this.props
+    return (
+      <ol className='annotationList'>
+        {annotations.map(annotation => {
+          return (
+            <li className='annotation' key={annotation.id}>
+            {annotation.summary}
+            </li>
+          )
+        })}
+      </ol>
+    )
+  }
+}
+
+class BookListComponent extends Component {
+  render () {
+    const { books, bookAnnotations } = this.props
     return (
       <div className='bookList'>
-        <h1>Test</h1>
+        {books.map(book => {
+          return (
+            <div className='book' key={book.id}>
+              <h1>{book.title}</h1>
+              <AnnotationsComponent annotations = {bookAnnotations.get(book.id)} />
+            </div>
+          )
+        })}
       </div>
     )
   }
 }
 
-export default BookListComponent;
+export default BookListComponent

@@ -55,6 +55,7 @@ module.exports = function(env) {
       new ExtractTextPlugin('[name].css', {
         disable: env === 'production' ? false : true
       })
-    ]
+    ],
+    devtool: 'cheap-module-source-map'
   }
 }
